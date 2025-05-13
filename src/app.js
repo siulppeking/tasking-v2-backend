@@ -4,6 +4,7 @@ const cors = require('cors');
 const authRouter = require('./routes/auth.routes');
 const taskRouter = require('./routes/task.routes');
 const estadoRouter = require('./routes/estadoRouter');
+const proyectoRouter = require('./routes/proyectoRouter');
 
 const app = express();
 
@@ -21,5 +22,6 @@ app.use('/api', authRouter);
 
 app.use('/api/task', taskRouter);
 app.use('/api/estados', estadoRouter);
+app.use('/api/proyectos', proyectoRouter);
 
 module.exports = app;
